@@ -895,14 +895,9 @@ body {
     margin-left: 8px;
 }
 
-.footer-button2:hover {
-    background-color: #ffffff;
-    opacity: 1;
-}
 
-.footer-button2:hover .footer-img2 {
-    color: #f16d7f;
-}
+
+
 
 .advantages {
     height: 252px;
@@ -1082,7 +1077,6 @@ body {
 .filter-left-title {
     /* Style for "Category" */
     width: 243px;
-    height: 37px;
     color: #ef5b70;
     font-size: 14px;
     font-weight: 700;
@@ -1142,6 +1136,10 @@ details[open] > .filter-left-title-summary::after {
     text-transform: none;
 }
 
+.filter-left-link:hover {
+    color: #f16d7f;
+}
+
 .filter-left {
     height: 1460px;
     display: flex;
@@ -1188,6 +1186,10 @@ details[open] > .filter-left-title-summary::after {
     line-height: 26px;
     text-decoration: none;
     
+}
+
+.filter-top-block-reference:hover {
+    color: #f16d7f;
 }
 
 .filter-top-block-VerticalLine {
@@ -1455,3 +1457,323 @@ details[open] > .sort-summary::after {
     padding: 0px 15px;
     width: 114px;
 }
+
+.CartCatalog {
+    margin-top: 71px;
+}
+
+
+
+.CartCatalog__Header {
+    display: flex;
+    justify-content:space-between;
+}
+
+.CartCatalog__HeaderTitle {
+    /* Style for "Product De" */
+    color: #222222;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;    
+    
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+.CartCatalog__SplitLine {
+    /* Style for "Shape 7 co" */
+    height: 1px;
+    background-color: #eaeaea;;
+}
+
+.CartCatalog__item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex; 
+    align-content: center;
+
+}
+
+.CartCatalog-img {
+    width: 100px;
+    height: 115px;
+}
+
+.CartCatalog-textBox-ProductName {
+    /* Style for "Mango  Peo" */
+    color: #222222;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;    
+    
+    margin-top: 13px;
+}
+
+.CartCatalog-textBox {
+    width: 390px;
+    margin-left: 21px;
+}
+
+.CartCatalog-textBox-ProductProperties {
+    margin-top: 38px;
+}
+
+.CartCatalog-textBox-ProductProperty {
+    font-size: 13px;
+    line-height: 20px;
+    /* Text style for "C, olor:," */
+    color: #575757;
+    font-weight: 700;
+}
+
+.CartCatalog-textBox-ProductPropertyValue {
+    /* Style for "Color:   R" */
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #575757;
+}
+
+.CartCatalog-TextStyle {
+    /* Style for "$150" */
+    color: #656565;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 115px;
+}
+
+
+
+.CartCatalog_Column1_Width {
+    width: 510px;
+}
+
+.CartCatalog_Column2_Width {
+    width: 170px;
+}
+
+.CartCatalog_Column3_Width {
+    width: 140px;
+}
+
+.CartCatalog_Column4_Width {
+    width: 140px;
+}
+
+.CartCatalog_Column5_Width {
+    width: 120px;
+}
+
+.CartCatalog_Column6_Width {
+    width: 50px;
+}
+
+.CartCatalog-InputStyle {
+    
+    /* Style for "Rectangle" */
+    width: 15px;
+    height: 30px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;    
+    
+    /* Style for "$150" */
+    color: #656565;
+    font-size: 13px;
+    font-weight: 400;    
+    line-height: 28px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;    
+}
+
+
+
+
+
+
+
+
+
+.CartCatalog_Column2_Width1 {
+    width: 80px;
+}
+
+.CartCatalog_Column3_Width1 {
+    width: 240px;
+    text-align: center;
+    height: 115px;
+    line-height: 115px;
+}
+
+.CartCatalog_Column4_Width1 {
+    width: 50px;
+}
+
+.CartCatalog_Column5_Width1 {
+    width: 230px;
+}
+
+.ShoppingCart_button {
+    /* Style for "Rectangle" */
+    height: 50px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;    
+
+    text-decoration: none;
+    padding-left: 39px;
+    padding-right: 39px;
+    line-height: 50px;
+
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+.ShoppingCart_button:hover {
+    color: white;
+    background-color: #f16d7f;
+}
+
+.ShoppingCart_ButtonsSection {
+    margin-top: 44px;
+    margin-bottom: 63px;
+}
+
+.OrderSettingsSection_Block {
+    width: 360px;
+}
+
+.OrderSettingsSection_Block_title {
+    /* Style for "Shipping A" */
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;    
+}
+
+.OrderSettingsSection_AdressInput {
+    /* Style for "Rectangle" */
+    width: 323px;
+    height: 45px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;    
+    
+    color: #b1b1b1;
+    font-size: 13px;
+    font-weight: 300;    
+    line-height: 45px;
+    
+    margin-top: 18px;
+    
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.ShoppingCart_button2 {
+    /* Style for "Rectangle" */
+    height: 35px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 35px;
+
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 25px;
+    
+    display: block;
+    width: 85px;
+    text-align: center;    
+}
+
+.OrderSettingsSection_Blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.OrderSettingsSection_Label {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 28px;
+    margin-bottom: 4px;
+}
+
+.OrderSettingsSection_Block2 {
+    width: 274px;
+    height: 134px;
+    background-color: #f5f3f3;    
+    padding: 40px 43px;
+}
+
+.OrderSettingsSection_line {
+    height: 1px;
+    background-color: #e2e2e2;    
+    margin-bottom: 17px;
+    margin-top: 22px;
+}
+
+.ShoppingCart_button3 {
+
+    height: 50px;
+    background-color: #f16d7f;
+
+    text-decoration: none;
+    line-height: 50px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;    
+    
+    display: block;
+    text-align: center;
+        
+}
+
+.OrderSettingsSection_Subtotal {
+    /* Style for "Sub total" */
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;    
+    
+    text-align: right;
+}
+
+.OrderSettingsSection_Gradtotal {
+    /* Style for "GRAND TOTA" */
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    margin-top: 14px;
+    text-align: right;
+}
+
+.OrderSettingsSection_GrandtotalNumber {
+    color: #f16d7f;
+    margin-left: 15px;
+}
+
+.OrderSettingsSection_SubtotalNumber {
+    margin-left: 20px;
+}
+
+.OrderSettingsSection {
+    margin-bottom: 79px;
+}
+
+
+
+
