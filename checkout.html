@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 </head>
@@ -71,7 +70,6 @@
     </div>
 
 </header>
-
 
 <nav class="nav">
     <ul class="menu container">
@@ -140,235 +138,52 @@
     </div>
 </div>
 
-<main class="catalog">
+<main class="CheckoutMainSection">
     <div class="container">
-        <div class="filter-left">
-            <details class="filter-left-title" open>
-                <summary class="filter-left-title-summary">Category</summary>
-                <ul class="filter-left-ul">
-                    <li><a class="filter-left-link" href="#">Accessories</a></li>
-                    <li><a class="filter-left-link" href="#">Bags</a></li>
-                    <li><a class="filter-left-link" href="#">Denim</a></li>
-                    <li><a class="filter-left-link" href="#">Hoodies & Sweatshirts</a></li>
-                    <li><a class="filter-left-link" href="#">Jackets & Coats</a></li>
-                    <li><a class="filter-left-link" href="#">Pants</a></li>
-                    <li><a class="filter-left-link" href="#">Polos</a></li>
-                    <li><a class="filter-left-link" href="#">Shirts</a></li>
-                    <li><a class="filter-left-link" href="#">Shoes</a></li>
-                    <li><a class="filter-left-link" href="#">Shorts</a></li>
-                    <li><a class="filter-left-link" href="#">Sweaters & Knits</a></li>
-                    <li><a class="filter-left-link" href="#">T-Shirts</a></li>
-                    <li><a class="filter-left-link" href="#">Tanks</a></li>
-                </ul>
-            </details>
-
-
-            <details class="filter-left-title"close>
-                <summary class="filter-left-title-summary">Brand</summary>
-            </details>
-            <details class="filter-left-title" close>
-                <summary class="filter-left-title-summary">dESIGNER</summary>
-
-            </details>
-        </div>
-        <div class="filter-top">
-            <div class="filter-top-block">
-                <p class="filter-top-block-title">Trending now</p>
-                <div class="filter-top-block-FilterSection">
-                    <a class="filter-top-block-reference" href="#">Bohemian</a>
-                    <p class="filter-top-block-VerticalLine">|</p>
-                    <a class="filter-top-block-reference" href="#">Floral</a>
-                    <p class="filter-top-block-VerticalLine">|</p>
-                    <a class="filter-top-block-reference" href="#">Lace</a>
+        <a href="#" class="CheckoutMainSection__Title">01.   Shipping Adress</a>
+        <div class="CheckoutOrderDetailsBlock">
+            <div class="CheckoutOrderDetailsBlock__Left">
+                <p class="CheckoutOrderDetailsBlock__Text1">Check as a guest or register</p>
+                <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with us for future convenience</p>
+                <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">
+                    <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="guest">CHECKOUT AS GUEST
+                </p>
+                <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top20">
+                    <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="register">REGISTER
+                </p>
+                <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">register and save time!</p>
+                <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with us for future convenience</p>
+                <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top34">>> Fast and easy checkout</p>
+                <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">>> Easy access to your order history and status</p>
+                <a class="ShoppingCart_button2 Margin_Top38 Margin_Bottom79" href="#">Continue</a>
+            </div>
+            <div class="CheckoutOrderDetailsBlock_Right">
+                <p class="CheckoutOrderDetailsBlock__Text1">Already registed?</p>
+                <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Please log in below</p>
+                <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top27">EMAIL ADDRESS</p>
+                <input type="email" class="OrderSettingsSection_AdressInput Margin_Top15" required>
+                <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top23">EMAIL ADDRESS</p>
+                <input type="password" class="OrderSettingsSection_AdressInput  Margin_Top15" required>
+                <p class="CheckoutOrderDetailsBlock__TextRed  Margin_Top23">* Required Fileds</p>
+                <div class="CheckoutOrderDetailsBlock__LogInBlock">
+                    <a class="ShoppingCart_button2 Margin_Top0" href="#">Log in</a>
+                    <a class="CheckoutOrderDetailsBlock__TextForgotPassword" href="#">Forgot Password ?</a>
                 </div>
             </div>
-            <div class="filter-top-block">
-                <p class="filter-top-block-title">Size</p>
-                <div class="filter-top-block-FilterSection">
-                    <label class="filter-top-block-checkboxText" for="Size_XXS">
-                        <input class="filter-top-block-checkbox" id="Size_XXS" type="checkbox">XXS
-                    </label>
-                    <label class="filter-top-block-checkboxText" for="Size_XS">
-                        <input class="filter-top-block-checkbox" id="Size_XS" type="checkbox">XS
-                    </label>
-                    <label class="filter-top-block-checkboxText" for="Size_S">
-                        <input class="filter-top-block-checkbox" id="Size_S" type="checkbox">S
-                    </label>
-                    <label class="filter-top-block-checkboxText" for="Size_M">
-                        <input class="filter-top-block-checkbox" id="Size_M" type="checkbox">M
-                    </label>
-                    <label class="filter-top-block-checkboxText" for="Size_L">
-                        <input class="filter-top-block-checkbox" id="Size_L" type="checkbox">L
-                    </label>
-                    <label class="filter-top-block-checkboxText" for="Size_XL">
-                        <input class="filter-top-block-checkbox" id="Size_XL" type="checkbox">XL
-                    </label>
-                    <label class="filter-top-block-checkboxText" for="Size_XXL">
-                        <input class="filter-top-block-checkbox" id="Size_XXL" type="checkbox">XXL
-                    </label>
-
-                </div>
-            </div>
-            <div class="filter-top-block">
-                <p class="filter-top-block-title">pRICE</p>
-                <div class="filter-top-block-FilterSection">
-                </div>
-            </div>
-
         </div>
-
-        <div class="sort">
-            <div class="sort-label">Sort By</div>
-            <details class="sort-details">
-                <summary class="sort-summary">Name</summary>
-            </details>
-            <div class="sort-label">Show</div>
-            <details class="sort-details">>
-                <summary class="sort-summary">09</summary>
-            </details>
-        </div>
-
-        <div class="catalog-items display-products">
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_9.jpg" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_10.jpg" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_3.png" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_11.jpg" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_8.png" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_12.jpg" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_6.png" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_13.jpg" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-            <div class="product-item">
-                <a href="SinglePage.html" class="product">
-                    <img class="product-img" src="img/Item_14.jpg" alt="Product photo">
-                    <div class="product-textBox">
-                        <p class="product-text">Mango People T-shirt</p>
-                        <p class="product-price">$52.00</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="catalog-footer">
-            <nav class="catalog-pagination">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            <i class="fas fa-less-than"></i>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">6</a></li>
-                    <li class="page-item">
-                        <p class="page-link">.....</p>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">20</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            <i class="fas fa-greater-than"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="button">View All</div>
-        </div>
+        <div class="CheckoutMainSection__SplitLine"></div>
+        <a href="#" class="CheckoutMainSection__Title">02.   BILLING INFORMATION</a>
+        <div class="CheckoutMainSection__SplitLine"></div>
+        <a href="#" class="CheckoutMainSection__Title">03.   SHIPPING INFORMATION</a>
+        <div class="CheckoutMainSection__SplitLine"></div>
+        <a href="#" class="CheckoutMainSection__Title">04.   SHIPPING METHOD</a>
+        <div class="CheckoutMainSection__SplitLine"></div>
+        <a href="#" class="CheckoutMainSection__Title">05.   PAYMENT METHOD</a>
+        <div class="CheckoutMainSection__SplitLine"></div>
+        <a href="#" class="CheckoutMainSection__Title">06.   ORDER REVIEW</a>
+        <div class="CheckoutMainSection__SplitLine"></div>
     </div>
 </main>
-
-<div class="advantages">
-    <div class="container advantages-flex">
-        <article class="advantages-TextBox">
-            <img class="advantages-TextBox-img" src="img/FreeDelivery.svg" alt="Free delivery">
-            <div class="advantages-TextBox-Block1">Free Delivery</div>
-            <div class="advantages-TextBox-Block2">Worldwide delivery on all. Authorit tively morph next-generation
-                innov tion with extensive models.
-            </div>
-        </article>
-        <article class="advantages-TextBox">
-            <img class="advantages-TextBox-img" src="img/SalesDiscounts.svg" alt="Free delivery">
-            <div class="advantages-TextBox-Block1">Sales & discounts</div>
-            <div class="advantages-TextBox-Block2">Worldwide delivery on all. Authorit tively morph next-generation
-                innov tion with extensive models.
-            </div>
-        </article>
-        <article class="advantages-TextBox">
-            <img class="advantages-TextBox-img" src="img/QualityAssurance.svg" alt="Free delivery">
-            <div class="advantages-TextBox-Block1">Quality assurance</div>
-            <div class="advantages-TextBox-Block2">Worldwide delivery on all. Authorit tively morph next-generation
-                innov tion with extensive models.
-            </div>
-        </article>
-
-    </div>
-</div>
 
 <div class="Subscribe">
     <div class="container Subscribe__flex">
