@@ -5,9 +5,15 @@
   margin: 0
   padding: 0
 
-
-body 
+html, body
   font-family: 'Lato', sans-serif
+  height: 100%
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.content
+  flex: 1
 
 
 .container
@@ -15,10 +21,17 @@ body
   margin: 0 auto
   position: relative
 
+.display-block
+  display: block
 
 .display-center
   display: flex
   justify-content: center
+
+.display-products
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
 
 
 .header 
@@ -176,7 +189,7 @@ body
   height: 614px
   &__flex
     height: 100%
-    background: url(img/Background_Picture1.png) -13px -44px
+    background: url(../img/Background_Picture1.png) -13px -44px
   &__text
     margin-top: 224px
     float: left
@@ -222,19 +235,19 @@ body
     text-transform: uppercase
     letter-spacing: 0.75px
   &__ForMen
-    background-image: url(img/HotDeals_ForMen.png)
+    background-image: url(../img/HotDeals_ForMen.png)
     width: 560px
     height: 542px
     margin-top: 98px
   &__ForWomen
-    background-image: url(img/HotDeals_ForWomen.png)
+    background-image: url(../img/HotDeals_ForWomen.png)
     width: 560px
     height: 261px
     position: absolute
     left: 581px
     top: 0
   &__ForKids
-    background-image: url(img/HotDeals_ForKids.png)
+    background-image: url(../img/HotDeals_ForKids.png)
     width: 560px
     height: 542px
     position: absolute
@@ -243,7 +256,7 @@ body
   &__Accesories
     width: 560px
     height: 261px
-    background: #dadad2 url(img/HotDeals_Accesories.png) no-repeat 147px 0
+    background: #dadad2 url(../img/HotDeals_Accesories.png) no-repeat 147px 0
     position: absolute
     top: 562px
 
@@ -266,11 +279,16 @@ body
     margin-bottom: 60px
 
 
+.Section-BrowseAllProduct
+  margin-top: 40px
+  height: 150px
+
+
 .banner2
   margin-bottom: 97px
   &__img
     height: 529px
-    background: #222224 url(img/banner.png) no-repeat
+    background: #222224 url(../img/banner.png) no-repeat
   &__text
     margin-top: 146px
     margin-left: 39px
@@ -343,7 +361,7 @@ body
   background-size: cover
   background-repeat: no-repeat
   background-position: center
-  background-image: url(img/Background_Picture2.jpg)
+  background-image: url(../img/Background_Picture2.jpg)
   background-color: #f2f2f2
   &__flex
     display: flex
@@ -383,6 +401,7 @@ body
     font-weight: 400
     line-height: 44px
     letter-spacing: 0.35px
+    transition: background-color 0.3s
   &__button:hover
     border: 1px solid #f16d7f
     color: #f16d7f
@@ -540,983 +559,640 @@ body
     color: #f16d7f
 
 
-
-
-
-
-
-
 .product-item
   margin-bottom: 39px
   width: 263px
   position: relative
   transition: transform 0.3s
-
+  &__textBox
+    padding: 20px 15px
+  &__link
+    display: block
+    text-decoration: none
+  &__text
+    /* Style for "Mango  Peo" */
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+  &__price
+    /* Style for "$52.00" */
+    color: #f16d7f
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    margin-top: 16px
+  &__img
+    width: 100%
+    height: 281px
 
 .product-item:hover
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
   transform: scale(1.1, 1.1)
 
-
-.product-item:hover .parent-add
+.product-item:hover .add-to-cart
   display: flex
 
-
-.product-item:hover .product-img
+.product-item:hover .product-item__img
   filter: brightness(50%)
 
 
-.product-text
-  /* Style for "Mango  Peo" */
-  color: #222222
-  font-size: 13px
-  font-weight: 400
-  text-transform: uppercase
-
-
-.product-price
-  /* Style for "$52.00" */
-  color: #f16d7f
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-  margin-top: 16px
-
-
-.display-products
-  display: flex
-  justify-content: space-between
-  flex-wrap: wrap
-
-
-.product-img
-  width: 100%
-  height: 281px
-
-
-
-
-.Section-BrowseAllProduct
-  margin-top: 40px
-  height: 150px
-
-
-.img-arrow
-  margin-left: 9px
-
-.product-textBox
-  padding: 20px 15px
-
-
-.product 
-  display: block
-  text-decoration: none
-
-
-.add-to-cart 
-  /* Style for "Rounded Re" */
-  height: 39px
-  border: 1px solid #ffffff
-  line-height: 39px
-
-  padding-left: 12px
-  padding-right: 12px
-
-
-  color: #ffffff
-  font-size: 13px
-  font-weight: 700
-
-  display: flex
-  align-content: center
-
-
-.add-to-cart:hover 
-  box-shadow: 0 0 5px #fff
-
-
-.parent-add 
+.add-to-cart
   position: absolute
   top: 98px
   width: 263px
   display: none
   justify-content: center
+  &__link
+    /* Style for "Rounded Re" */
+    height: 39px
+    border: 1px solid #ffffff
+    line-height: 39px
+    padding-left: 12px
+    padding-right: 12px
+    color: #ffffff
+    font-size: 13px
+    font-weight: 700
+    display: flex
+    align-content: center
+  &__link:hover
+    box-shadow: 0 0 5px #fff
+  &__img
+    margin-right: 8px
 
 
-.add-to-cart-img 
-  margin-right: 8px
+.img-arrow
+  margin-left: 9px
 
 
-
-
-
-.advantages 
+.Section-advantages
   height: 252px
   padding-top: 89px
   background-color: #222224
+  &__flex
+    display: flex
+    justify-content: space-between
 
 
-
-
-.advantages-TextBox-img 
-  position: absolute
-  top: 0
-  left: 132px
-
-
-.advantages-TextBox 
+.advantages-TextBox
   width: 310px
   display: block
-
   margin-left: 26px
   position: relative
-
-
-
-.advantages-TextBox-Block1 
-  position: absolute
-  top: 64px
-  left: 0
-
-  /* Style for "Free Deliv" */
-  color: #fbfbfb
-  font-size: 20px
-  font-weight: 700
-  /* Text style for "Free Deliv" */
-  letter-spacing: 0.5px
-
-  width: 310px
-  text-align: center
-
-
-.advantages-TextBox-Block2 
-  position: absolute
-  top: 101px
-  left: 0
-
-  /* Style for "Worldwide" */
-  color: #fbfbfb
-  font-size: 14px
-  font-weight: 300
-  /* Text style for "W, orldwid" */
-  letter-spacing: 0.35px
-
-
-.advantages-flex 
-  display: flex
-  justify-content: space-between
-
-
+  &__img
+    position: absolute
+    top: 0
+    left: 132px
+  &__Block1
+    position: absolute
+    top: 64px
+    left: 0
+    /* Style for "Free Deliv" */
+    color: #fbfbfb
+    font-size: 20px
+    font-weight: 700
+    /* Text style for "Free Deliv" */
+    letter-spacing: 0.5px
+    width: 310px
+    text-align: center
+  &__Block2
+    position: absolute
+    top: 101px
+    left: 0
+    /* Style for "Worldwide" */
+    color: #fbfbfb
+    font-size: 14px
+    font-weight: 300
+    /* Text style for "W, orldwid" */
+    letter-spacing: 0.35px
 
 
 .NewArrivals 
   background-color: #f8f3f4
+  &__flex
+    display: flex
+    justify-content: space-between
+  &__left
+    height: 148px
+    color: #f16d7f
+    font-size: 24px
+    font-weight: 400
+    line-height: 148px
+    text-transform: uppercase
+  &__right
+    height: 148px
+    display: flex
+    justify-content: flex-end
+  &__text
+    height: 148px
+    line-height: 148px
+    font-size: 14px
+    text-transform: uppercase
+    color: #636363
+    font-weight: 300
+    text-decoration: none
+  &__link
+    height: 148px
+    line-height: 148px
+    font-size: 14px
+    text-transform: uppercase
+    color: #636363
+    font-weight: 700
+    text-decoration: none
+  &__link:hover
+    /* Style for "Home / Men" */
+    color: #f16d7f
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 700
 
 
-.NewArrivals-left 
-  height: 148px
-
-  /* Style for "New Arriva" */
-  color: #f16d7f
-  font-size: 24px
-  font-weight: 400
-  line-height: 148px
-  text-transform: uppercase
-
-
-.NewArrivals-right 
-  height: 148px
-
-  /* Style for "Home / Men" */
-  font-size: 14px
-  line-height: 148px
-  text-transform: uppercase
-  /* Text style for "Home / Men" */
-  color: #636363
-  font-weight: 300
-
-
-.Arrivals-text 
-  /* Style for "Home / Men" */
-  color: #f16d7f
-  font-size: 14px
-  line-height: 20px
-  text-transform: uppercase
-  font-weight: 700
-
-
-.NewArrivals-flex 
-  display: flex
-  justify-content: space-between
-
-
-.sort 
-  /* Style for "Rectangle" */
-  width: 846px
-  height: 50px
-  background-color: #f3f3f3
-
-  position: absolute
-  top: 127px
-  left: 287px
-
-  display: flex
-  align-items: center
-
-
-.catalog 
+.catalog
   height: 1463px
   margin-top: 71px
   margin-bottom: 110px
+  &__filter-left
+    height: 1460px
+    display: flex
+    flex-direction: column
+  &__filter-top
+    position: absolute
+    top: 0
+    left: 287px
+    width: 846px
+    display: flex
+    justify-content: space-between
+  &__sort
+    width: 846px
+    height: 50px
+    background-color: #f3f3f3
+    position: absolute
+    top: 127px
+    left: 287px
+    display: flex
+    align-items: center
+  &__items
+    position: absolute
+    top: 225px
+    left: 287px
+  &__pagination
+    height: 44px
+    border-radius: 3px
+    border: 1px solid #ebebeb
+    background-color: #ffffff
+    padding: 0 7px
+  &__footer
+    position: absolute
+    top: 1431px
+    left: 287px
+    width: 853px
+    display: flex
+    justify-content: space-between
+    align-items: center
 
 
+.filter-left
+  &__title
+    /* Style for "Category" */
+    width: 243px
+    color: #ef5b70
+    font-size: 14px
+    font-weight: 700
+    line-height: 37px
+    text-transform: uppercase
+    border-left: 5px solid #ef5b70
+    border-bottom: 1px solid #ebebeb
+    padding-left: 11px
+    margin-bottom: 9px
+    position: relative
+  &__title-summary
+    display: block
+    outline: none
+  &__title-summary::-webkit-details-marker
+    display: none
+  &__title-summary::after
+    content: url("../img/details_close.png")
+    position: absolute
+    top: 0
+    left: 235px
+  &__ul
+    list-style-type: none
+    display: block
+    margin-bottom: 30px
+    margin-left: 17px
+  &__link
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 33px
+    text-decoration: none
+    text-transform: none
+  &__link:hover
+    color: #f16d7f
 
-
-.catalog-items 
+details[open] > .filter-left__title-summary::after
+  content: url("../img/details_open.png")
   position: absolute
-  top: 225px
-  left: 287px
+  top: 0
+  left: 235px
 
 
-.catalog-footer 
-  position: absolute
-  top: 1431px
-  left: 287px
+.filter-top-block
+  width: 263px
+  &__title
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+  &__FilterSection
+    width: 280px
+    display: flex
+    flex-wrap: wrap
+    margin-top: 25px
+  &__reference
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    text-decoration: none
+  &__reference:hover
+    color: #f16d7f
+  &__VerticalLine
+    color: #dfdfdf
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    padding: 0 10px
+  &__checkboxText
+    width: 69px
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+  &__checkbox
+    margin-right: 10px
 
-  width: 853px
-  display: flex
-  justify-content: space-between
-  align-items: center
 
-
-.page-link 
-
-  display: block
-  padding: 13px 8px
-
-  color: #c4c4c4
-  font-size: 16px
-  font-weight: bold
-
-  text-transform: uppercase
-  text-decoration: none
-
-
-.page-link:hover 
-  color: #ef5b70
-
-
-.pagination 
+.pagination
   list-style-type: none
   display: flex
   justify-content: center
-
-
-.catalog-pagination 
-  height: 44px
-  border-radius: 3px
-  border: 1px solid #ebebeb
-  background-color: #ffffff
-  padding: 0 7px
-
-
-
-
-.filter-left-title 
-  /* Style for "Category" */
-  width: 243px
-  color: #ef5b70
-  font-size: 14px
-  font-weight: 700
-  line-height: 37px
-  text-transform: uppercase
-  border-left: 5px solid #ef5b70
-
-  border-bottom: 1px solid #ebebeb
-  padding-left: 11px
-  margin-bottom: 9px
-
-  position: relative
-
-
-.filter-left-title-summary 
-  display: block
-
-
-
-
-.filter-left-title-summary::-webkit-details-marker 
-  display: none
-
-
-.filter-left-title-summary::after 
-  content: '▼'
-
-  position: absolute
-  top: 0
-  left: 235px
-
-
-details[open] > .filter-left-title-summary::after 
-  content: '▲'
-
-  position: absolute
-  top: 0
-  left: 235px
-
-
-
-
-
-.filter-left-ul 
-  list-style-type: none
-  display: block
-  margin-bottom: 30px
-  margin-left: 17px
-
-
-.filter-left-link 
-  color: #6f6e6e
-  font-size: 14px
-  font-weight: 400
-  line-height: 33px
-  text-decoration: none
-  text-transform: none
-
-
-.filter-left-link:hover 
-  color: #f16d7f
-
-
-.filter-left 
-  height: 1460px
-  display: flex
-  flex-direction: column
-
-
-.filter-top-block-title 
-  /* Style for "Trending n" */
-  color: #6f6e6e
-  font-size: 14px
-  font-weight: 700
-  line-height: 20px
-  text-transform: uppercase
-
-
-.filter-top 
-  position: absolute
-  top: 0
-  left: 287px
-
-  width: 846px
-  display: flex
-  justify-content: space-between
-
-
-
-
-
-
-.filter-top-block-FilterSection 
-  width: 280px
-  display: flex
-  flex-wrap: wrap
-
-  margin-top: 25px
-
-
-.filter-top-block-reference 
-  /* Style for "Bohemian" */
-  color: #6f6e6e
-  font-size: 14px
-  font-weight: 400
-  line-height: 26px
-  text-decoration: none
-
-
-
-.filter-top-block-reference:hover 
-  color: #f16d7f
-
-
-.filter-top-block-VerticalLine 
-  color: #dfdfdf
-  font-size: 14px
-  font-weight: 400
-  line-height: 26px
-  padding: 0 10px
-
-
-.filter-top-block-checkboxText 
-  width: 69px
-  color: #6f6e6e
-  font-size: 14px
-  font-weight: 400
-  line-height: 20px
-  text-transform: uppercase
-
-
-.filter-top-block-checkbox 
-  margin-right: 10px
-
-
-.filter-top-block 
-  width: 263px
-
-
-.sort-label 
-  height: 30px
-  border: 1px solid #ebebeb
-  background-color: #ffffff
-  text-decoration: none
-  padding-left: 12px
-  padding-right: 10px
-  line-height: 30px
-
-  color: #6f6e6e
-  font-size: 14px
-  font-weight: 400
-  margin-left: 10px
-
-
-.sort-details 
-
-  height: 30px
-  color: #6f6e6e
-  font-size: 14px
-  font-weight: 400
-  line-height: 30px
-  border: 1px solid #ebebeb
-
-  background-color: #ffffff
-  text-decoration: none
-  padding-left: 12px
-  padding-right: 10px
-
-
-
-
-.sort-summary 
-  display: block
-
-
-.sort-summary::-webkit-details-marker 
-  display: none
-
-
-.sort-summary::after 
-  content: '▼'
-
-
-details[open] > .sort-summary::after 
-  content: '▲'
-
-
-.YouMayLikeAlso-header 
-  color: #4d4d4d
-  font-size: 24px
-  font-weight: 400
-  text-transform: uppercase
-  text-align: center
-
-  margin-bottom: 70px
-
-
-.YouMayLikeAlso 
+  &__link
+    display: block
+    padding: 13px 8px
+    color: #c4c4c4
+    font-size: 16px
+    font-weight: bold
+    text-transform: uppercase
+    text-decoration: none
+  &__link:hover
+    color: #ef5b70
+
+
+.sort
+  &__label
+    height: 30px
+    border: 1px solid #ebebeb
+    background-color: #ffffff
+    text-decoration: none
+    padding-left: 12px
+    padding-right: 10px
+    line-height: 30px
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    margin-left: 10px
+  &__details
+    height: 30px
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 30px
+    border: 1px solid #ebebeb
+    background-color: #ffffff
+    text-decoration: none
+    padding-left: 12px
+    padding-right: 10px
+  &__summary
+    display: block
+    outline: none
+  &__summary::-webkit-details-marker
+    display: none
+  &__summary::after
+    content: url("../img/details_close.png")
+
+details[open] > .sort__summary::after
+  content: url("../img/details_open.png")
+
+
+.Section-YouMayLikeAlso
   margin-top: 119px
   margin-bottom: 34px
+  &__header
+    color: #4d4d4d
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 70px
 
 
-.product-picture 
-  height: 777px
-  border: 1px solid #eaeaea
-  background-color: #f7f7f7
-  text-align: center
-  position: relative
+.product-section
+  height: 1483px
+  &__picture
+    height: 777px
+    border: 1px solid #eaeaea
+    background-color: #f7f7f7
+    text-align: center
+    position: relative
 
-
-
-
-.product-details 
+.product-details
   height: 730px
   border: 1px solid #eaeaea
   background-color: #ffffff
   position: relative -86px 0
-
   padding: 73px 250px 0 250px
-
-
-.product-section 
-  height: 1483px
-
-
-.product-details-container 
-  width: 642px
-  margin: 0 auto
-
-
-.product-details-header 
-  color: #f16d7f
-  font-size: 14px
-  font-weight: 700
-  line-height: 24px
-  text-transform: uppercase
-
-
-.product-details_border 
-  display: flex
-  justify-content: center
-  align-items: center
-
-  margin-top: 14px
-
-
-.product-details_border1 
-  width: 42px
-  height: 1px
-  background-color: #eaeaea
-
-
-.product-details_border2 
-  /* Style for "Rectangle" */
-  width: 63px
-  height: 3px
-  background-color: #ef5b70
-
-
-.product-details-header2 
-  color: #4d4d4d
-  font-size: 18px
-  font-weight: 800
-  text-transform: uppercase
-  margin-top: 17px
-
-
-.product-details-description 
-  /* Style for "Compelling" */
-  color: #5e5e5e
-  font-size: 14px
-  font-weight: 300
-  line-height: 24px
-
-  margin-top: 67px
-  padding-left: 12px
-  padding-right: 12px
-
-
-.product-properties 
-  display: flex
-  justify-content: space-around
-
-  margin-top: 28px
-
-
-.product-property-text 
-  color: #b9b9b9
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.product-property-value-text 
-  color: #2f2f2f
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.product-details-price 
-  color: #ef5b70
-  font-size: 24px
-  font-weight: 700
-
-  margin-top: 37px
-
-
-.product-details_border3 
-  width: 642px
-  height: 1px
-  background-color: #eaeaea
-  margin-top: 43px
-  margin-bottom: 63px
-
-
-.product-details-filters 
-  width: 537px
-  display: flex
-  justify-content: space-between
-  margin-left: 53px
-  text-align: left
+  &__container
+    width: 642px
+    margin: 0 auto
+  &__header
+    color: #f16d7f
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+  &__header2
+    color: #4d4d4d
+    font-size: 18px
+    font-weight: 800
+    text-transform: uppercase
+    margin-top: 17px
+  &__border
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 14px
+  &__border1
+    width: 42px
+    height: 1px
+    background-color: #eaeaea
+  &__border2
+    width: 63px
+    height: 3px
+    background-color: #ef5b70
+  &__border3
+    width: 642px
+    height: 1px
+    background-color: #eaeaea
+    margin-top: 43px
+    margin-bottom: 63px
+  &__description
+    color: #5e5e5e
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    margin-top: 67px
+    padding-left: 12px
+    padding-right: 12px
+  &__properties
+    display: flex
+    justify-content: space-around
+    margin-top: 28px
+  &__properties-text
+    color: #b9b9b9
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__properties-value
+    color: #2f2f2f
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__price
+    color: #ef5b70
+    font-size: 24px
+    font-weight: 700
+    margin-top: 37px
+  &__filters
+    width: 537px
+    display: flex
+    justify-content: space-between
+    margin-left: 53px
+    text-align: left
+  &__add-to-cart
+    height: 59px
+    width: 537px
+    border: 1px solid #ef5b70
+    background-color: #ffffff
+    line-height: 59px
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 700
+    margin-top: 28px
+    margin-left: 53px
+    display: flex
+    justify-content: center
+    align-content: center
+    text-decoration: none
+    transition: background-color 0.3s
+  &__add-to-cart:hover
+    color: #ffffff
+    border: 1px solid #ffffff
+    background-color: #ef5b70
+  &__add-to-cart-img
+    margin-right: 15px
 
 
 .product-details-filter 
   width: 144px
+  &__title
+    color: #2f2f2f
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__value
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #bcbcbc
+    font-size: 13px
+    font-weight: 400
+    line-height: 35px
+    margin-top: 16px
+    padding: 0 15px
+    width: 114px
 
 
-.product-details-filter-title 
-  color: #2f2f2f
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.product-details-add-to-cart 
-  height: 59px
-  width: 537px
-  border: 1px solid #ef5b70
-  background-color: #ffffff
-  line-height: 59px
-
-  color: #ef5b70
-  font-size: 16px
-  font-weight: 700
-
-  margin-top: 28px
-  margin-left: 53px
-
-  display: flex
-  justify-content: center
-  align-content: center
-
-  text-decoration: none
-
-
-.product-details-add-to-cart:hover 
-  color: #ffffff
-  border: 1px solid #ffffff
-  background-color: #ef5b70
-
-
-.product-details-add-to-cart-img 
-  margin-right: 15px
-
-
-.product-details-filter-value 
-  border: 1px solid #eaeaea
-  background-color: #ffffff
-
-  color: #bcbcbc
-  font-size: 13px
-  font-weight: 400
-  line-height: 35px
-
-  margin-top: 16px
-  padding: 0 15px
-  width: 114px
-
-
-.CartCatalog 
+.CartCatalog
   margin-top: 71px
+  &__Header
+    display: flex
+    justify-content: space-between
+  &__HeaderTitle
+    color: #222222
+    font-size: 13px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: -0.2px
+    margin-top: 90px
+    margin-bottom: 20px
+  &__SplitLine
+    /* Style for "Shape 7 co" */
+    height: 1px
+    background-color: #eaeaea
+  &__Column1
+    width: 510px
+  &__Column2
+    width: 170px
+  &__Column3
+    width: 140px
+  &__Column4
+    width: 140px
+  &__Column5
+    width: 120px
+  &__Column6
+    width: 50px
 
-
-
-
-.CartCatalog__Header 
-  display: flex
-  justify-content: space-between
-
-
-.CartCatalog__HeaderTitle 
-  /* Style for "Product De" */
-  color: #222222
-  font-size: 13px
-  font-weight: 700
-  text-transform: uppercase
-  letter-spacing: -0.2px
-
-  margin-top: 90px
-  margin-bottom: 20px
-
-
-.CartCatalog__SplitLine 
-  /* Style for "Shape 7 co" */
-  height: 1px
-  background-color: #eaeaea
-
-
-.CartCatalog__item 
+.CartCatalog-item
   margin-top: 25px
   margin-bottom: 25px
   display: flex
   align-content: center
+  &__img
+    width: 100px
+    height: 115px
+  &__textBox
+    width: 390px
+    margin-left: 21px
+    margin-top: 13px
+  &__ProductName
+    color: #222222
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    text-decoration: none
+  &__ProductName:hover
+    color: $Color_Pink
+  &__ProductProperties
+    margin-top: 38px
+  &__ProductProperty
+    font-size: 13px
+    line-height: 20px
+    color: #575757
+    font-weight: 700
+  &__ProductPropertyValue
+    font-size: 13px
+    font-weight: 300
+    line-height: 20px
+    color: #575757
+  &__TextStyle
+    color: #656565
+    font-size: 13px
+    font-weight: 400
+    text-align: center
+    line-height: 115px
+  &__action
+    color: #656565
+    font-size: 13px
+    font-weight: 400
+    text-align: center
+    line-height: 115px
+  &__action:hover
+    color: $Color_Pink
+    font-size: 13px
+    font-weight: 400
+    text-align: center
+    line-height: 115px
+  &__InputStyle
+    width: 15px
+    height: 30px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #656565
+    font-size: 13px
+    font-weight: 400
+    line-height: 28px
+    text-align: center
+    padding-left: 15px
+    padding-right: 15px
+  &__Column2
+    width: 80px
+  &__Column3
+    width: 240px
+    text-align: center
+    height: 115px
+    line-height: 115px
+  &__Column4
+    width: 50px
+  &__Column5
+    width: 230px
 
 
-
-.CartCatalog-img 
-  width: 100px
-  height: 115px
-
-
-.CartCatalog-textBox-ProductName 
-  /* Style for "Mango  Peo" */
-  color: #222222
-  font-size: 13px
-  font-weight: 400
-  text-transform: uppercase
-
-  margin-top: 13px
-
-
-.CartCatalog-textBox 
-  width: 390px
-  margin-left: 21px
-
-
-.CartCatalog-textBox-ProductProperties 
-  margin-top: 38px
-
-
-.CartCatalog-textBox-ProductProperty 
-  font-size: 13px
-  line-height: 20px
-  /* Text style for "C, olor:," */
-  color: #575757
-  font-weight: 700
-
-
-.CartCatalog-textBox-ProductPropertyValue 
-  /* Style for "Color:   R" */
-  font-size: 13px
-  font-weight: 300
-  line-height: 20px
-  color: #575757
-
-
-.CartCatalog-TextStyle 
-  /* Style for "$150" */
-  color: #656565
-  font-size: 13px
-  font-weight: 400
-  text-align: center
-  line-height: 115px
-
-
-
-
-.CartCatalog_Column1_Width 
-  width: 510px
-
-
-.CartCatalog_Column2_Width 
-  width: 170px
-
-
-.CartCatalog_Column3_Width 
-  width: 140px
-
-
-.CartCatalog_Column4_Width 
-  width: 140px
-
-
-.CartCatalog_Column5_Width 
-  width: 120px
-
-
-.CartCatalog_Column6_Width 
-  width: 50px
-
-
-.CartCatalog-InputStyle 
-
-  /* Style for "Rectangle" */
-  width: 15px
-  height: 30px
-  border: 1px solid #eaeaea
-  background-color: #ffffff
-
-  /* Style for "$150" */
-  color: #656565
-  font-size: 13px
-  font-weight: 400
-  line-height: 28px
-  text-align: center
-  padding-left: 15px
-  padding-right: 15px
-
-
-
-
-
-
-
-
-
-
-.CartCatalog_Column2_Width1 
-  width: 80px
-
-
-.CartCatalog_Column3_Width1 
-  width: 240px
-  text-align: center
-  height: 115px
-  line-height: 115px
-
-
-.CartCatalog_Column4_Width1 
-  width: 50px
-
-
-.CartCatalog_Column5_Width1 
-  width: 230px
-
-
-.ShoppingCart_button 
-  /* Style for "Rectangle" */
-  height: 50px
-  border: 1px solid #eaeaea
-  background-color: #ffffff
-
-  text-decoration: none
-  padding-left: 39px
-  padding-right: 39px
-  line-height: 50px
-
-  color: #4a4a4a
-  font-size: 14px
-  font-weight: 700
-  text-transform: uppercase
-
-
-
-.ShoppingCart_button:hover 
-  color: white
-  background-color: #f16d7f
-
-
-.ShoppingCart_ButtonsSection 
+.ShoppingCart-ButtonsSection
   margin-top: 44px
   margin-bottom: 63px
 
 
-.OrderSettingsSection_Block 
-  width: 360px
-
-
-.OrderSettingsSection_Block_title 
-  /* Style for "Shipping A" */
-  color: #222222
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-
-
-.OrderSettingsSection_AdressInput 
-  width: 323px
-  height: 45px
-  border: 1px solid #eaeaea
-  background-color: #ffffff
-
-  color: #b1b1b1
-  font-size: 13px
-  font-weight: 300
-  line-height: 45px
-
-  margin-top: 18px
-
-  padding-left: 17px
-  padding-right: 17px
-
-
-.ShoppingCart_button2 
-  /* Style for "Rectangle" */
-  height: 35px
-  border: 1px solid #eaeaea
-  background-color: #ffffff
-
-  text-decoration: none
-  padding-left: 15px
-  padding-right: 15px
-  line-height: 35px
-
-  color: #4a4a4a
-  font-size: 11px
-  font-weight: 700
-  text-transform: uppercase
-  margin-top: 25px
-
-  display: block
-  width: 85px
-  text-align: center
-
-
-.OrderSettingsSection_Blocks 
-  display: flex
-  justify-content: space-between
-
-
-.OrderSettingsSection_Label 
-  color: #000000
-  font-size: 14px
-  font-weight: 300
-  margin-top: 28px
-  margin-bottom: 4px
-
-
-.OrderSettingsSection_Block2 
-  width: 274px
-  height: 134px
-  background-color: #f5f3f3
-  padding: 40px 43px
-
-
-.OrderSettingsSection_line 
-  height: 1px
-  background-color: #e2e2e2
-  margin-bottom: 17px
-  margin-top: 22px
-
-
-.ShoppingCart_button3 
-
-  height: 50px
-  background-color: #f16d7f
-
-  text-decoration: none
-  line-height: 50px
-
-  color: #ffffff
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-
-  display: block
-  text-align: center
-
-
-
-.OrderSettingsSection_Subtotal 
-  /* Style for "Sub total" */
-  color: #4a4a4a
-  font-size: 11px
-  font-weight: 400
-  text-transform: uppercase
-
-  text-align: right
-
-
-.OrderSettingsSection_Gradtotal 
-  /* Style for "GRAND TOTA" */
-  color: #222222
-  font-size: 16px
-  font-weight: 700
-  text-transform: uppercase
-
-  margin-top: 14px
-  text-align: right
-
-
-.OrderSettingsSection_GrandtotalNumber 
-  color: #f16d7f
-  margin-left: 15px
-
-
-.OrderSettingsSection_SubtotalNumber 
-  margin-left: 20px
-
-.OrderSettingsSection 
+.OrderSettings
   margin-bottom: 79px
+  &__Blocks
+    display: flex
+    justify-content: space-between
+  &__Block
+    width: 360px
+  &__Block2
+    width: 274px
+    height: 134px
+    background-color: #f5f3f3
+    padding: 40px 43px
+  &__title
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &__Label
+    color: #000000
+    font-size: 14px
+    font-weight: 300
+    margin-top: 28px
+    margin-bottom: 4px
+  &__AdressInput
+    width: 323px
+    height: 45px
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #b1b1b1
+    font-size: 13px
+    font-weight: 300
+    line-height: 45px
+    margin-top: 18px
+    padding-left: 17px
+    padding-right: 17px
+  &__Subtotal
+    color: #4a4a4a
+    font-size: 11px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: right
+  &__GrandTotal
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    margin-top: 14px
+    text-align: right
+  &__GrandTotalNumber
+    color: #f16d7f
+    margin-left: 15px
+  &__SubtotalNumber
+    margin-left: 20px
+  &__line
+    height: 1px
+    background-color: #e2e2e2
+    margin-bottom: 17px
+    margin-top: 22px
+
 
 .CheckoutMainSection
   margin-top: 55px
@@ -1568,31 +1244,6 @@ details[open] > .sort-summary::after
     margin-top: 32px
     align-items: center
 
-.Margin
-  &_Top0
-    margin-top: 0
-  &_Top11
-    margin-top: 11px
-  &_Top15
-    margin-top: 15px
-  &_Top16
-    margin-top: 16px
-  &_Top20
-    margin-top: 20px
-  &_Top23
-    margin-top: 23px
-  &_Top27
-    margin-top: 27px
-  &_Top32
-    margin-top: 32px
-  &_Top34
-    margin-top: 34px
-  &_Top38
-    margin-top: 38px
-  &_Bottom16
-    margin-bottom: 16px
-  &_Bottom79
-    margin-bottom: 79px
 
 .Cart
   &__img
@@ -1634,6 +1285,7 @@ details[open] > .sort-summary::after
     font-weight: 700
     text-transform: uppercase
 
+
 .CartMenuProduct
   display: flex
   text-decoration: none
@@ -1662,3 +1314,32 @@ details[open] > .sort-summary::after
     font-weight: 400
     text-transform: uppercase
     text-decoration: none
+
+
+.Margin
+  &_Top0
+    margin-top: 0
+  &_Top11
+    margin-top: 11px
+  &_Top15
+    margin-top: 15px
+  &_Top16
+    margin-top: 16px
+  &_Top20
+    margin-top: 20px
+  &_Top23
+    margin-top: 23px
+  &_Top25
+    margin-top: 25px
+  &_Top27
+    margin-top: 27px
+  &_Top32
+    margin-top: 32px
+  &_Top34
+    margin-top: 34px
+  &_Top38
+    margin-top: 38px
+  &_Bottom16
+    margin-bottom: 16px
+  &_Bottom79
+    margin-bottom: 79px
