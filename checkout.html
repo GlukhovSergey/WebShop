@@ -14,13 +14,47 @@
 
 <body>
 <div class="content">
-    <header class="header">
+    <header class="header sticky">
         <div class="container header__flex">
             <div class="header__left">
-                <a class="logo" href="index.html"><img class="logo__img" src="img/Logo.png" alt="logo">BRAN
-                    <span class="logo__d">D</span></a>
+                <a class="logo" href="index.html">
+                    <img class="logo__img" src="img/Logo.png" alt="logo">
+                    BRAN
+                    <span class="logo__d">D</span>
+                </a>
                 <form class="header__form" action="#">
-                    <div class="header__browse">Browse</div>
+                    <div class="header__browse">Browse&nbsp;&nbsp;
+                        <i class="fa fa-caret-down header__browse-caret-down" aria-hidden="true"></i>
+                        <div class="mega__box mega__box_browse">
+                            <div class="mega__flex">
+                                <div>
+                                    <h3 class="mega__heading">Women</h3>
+                                    <ul class="mega__ul">
+                                        <li><a class="mega__link" href="#">Dresses</a></li>
+                                        <li><a class="mega__link" href="#">Tops</a></li>
+                                        <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
+                                        <li><a class="mega__link" href="#">Jackets/Coats</a></li>
+                                        <li><a class="mega__link" href="#">Blazers</a></li>
+                                        <li><a class="mega__link" href="#">Denim</a></li>
+                                        <li><a class="mega__link" href="#">Leggings/Pants</a></li>
+                                        <li><a class="mega__link" href="#">Skirts/Shorts</a></li>
+                                        <li><a class="mega__link" href="#">Accessories </a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="mega__heading">Men</h3>
+                                    <ul class="mega__ul">
+                                        <li><a class="mega__link" href="#">Tees/Tank tops</a></li>
+                                        <li><a class="mega__link" href="#">Shirts/Polos</a></li>
+                                        <li><a class="mega__link" href="#">Sweaters</a></li>
+                                        <li><a class="mega__link" href="#">Sweatshirts/Hoodies</a></li>
+                                        <li><a class="mega__link" href="#">Blazers</a></li>
+                                        <li><a class="mega__link" href="#">Jackets/vests</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <input class="header__searchtext" type="text" placeholder="Search for Item...">
                     <button class="header__searchbutton">
                         <img src="img/magnifier.png" alt="">
@@ -28,50 +62,15 @@
                 </form>
             </div>
             <div class="header__right">
-                <div class="Cart__img"><img src="img/cart.svg" alt="cart">
-                    <div class="Cart__MenuBox">
-                        <a class="CartMenuProduct" href="product.html">
-                            <img class="CartMenuProduct__img" src="img/Item_20.png" alt="Product photo">
-                            <div class="CartMenuProduct__TextBox">
-                                <div class="CartMenuProduct__ProductName">Rebox Zane</div>
-                                <div class="CartMenuProduct__ProductMark">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="CartMenuProduct__ProductPrice">1&nbsp;x $250</div>
-                            </div>
-                        </a>
-                        <div class="SplitHorizontalLine Margin_Top16 Margin_Bottom16"></div>
-                        <a class="CartMenuProduct" href="product.html">
-                            <img class="CartMenuProduct__img" src="img/Item_19.png" alt="Product photo">
-                            <div class="CartMenuProduct__TextBox">
-                                <div class="CartMenuProduct__ProductName">Rebox Zane</div>
-                                <div class="CartMenuProduct__ProductMark">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="CartMenuProduct__ProductPrice">1&nbsp;x $250</div>
-                            </div>
-                        </a>
-                        <div class="SplitHorizontalLine Margin_Top16 Margin_Bottom16"></div>
-                        <div class="Cart__MenuTotalBox">
-                            <div class="Cart_MenuTotalText">TOTAL</div>
-                            <div class="Cart_MenuTotalText">$500.00</div>
-                        </div>
-                        <a class="Button-Pink-White-Pink-50 Margin_Top32" href="checkout.html">Checkout</a>
-                        <a class="Button-Black-White-Gray-50 Margin_Top11" href="ShoppingCart.html">Go&nbsp;to&nbsp;cart</a>
+                <div class="Cart__img">
+                    <div class="Cart__countGoods invisible" id="countGoods"></div>
+                    <a href="shoppingCart.html"><img src="img/cart.svg" alt="cart"></a>
+                    <div class="Cart__MenuBox" id="cartDropdownBox">
                     </div>
                 </div>
                 <a class="button" href="#">My&nbsp;Account</a>
             </div>
         </div>
-
     </header>
 
     <nav class="nav">
@@ -80,53 +79,55 @@
             <li class="menu__list"><a href="product.html" class="menu__link">Man</a>
                 <div class="mega__box">
                     <div class="mega__flex">
-                        <h3 class="mega__heading">Women</h3>
-                        <ul class="mega__ul">
-                            <li><a class="mega__link" href="#">Dresses</a></li>
-                            <li><a class="mega__link" href="#">Tops</a></li>
-                            <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
-                            <li><a class="mega__link" href="#">Jackets/Coats</a></li>
-                            <li><a class="mega__link" href="#">Blazers</a></li>
-                            <li><a class="mega__link" href="#">Denim</a></li>
-                            <li><a class="mega__link" href="#">Leggings/Pants</a></li>
-                            <li><a class="mega__link" href="#">Skirts/Shorts</a></li>
-                            <li><a class="mega__link" href="#">Accessories </a></li>
-
-                        </ul>
+                        <div>
+                            <h3 class="mega__heading">Women</h3>
+                            <ul class="mega__ul">
+                                <li><a class="mega__link" href="#">Dresses</a></li>
+                                <li><a class="mega__link" href="#">Tops</a></li>
+                                <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
+                                <li><a class="mega__link" href="#">Jackets/Coats</a></li>
+                                <li><a class="mega__link" href="#">Blazers</a></li>
+                                <li><a class="mega__link" href="#">Denim</a></li>
+                                <li><a class="mega__link" href="#">Leggings/Pants</a></li>
+                                <li><a class="mega__link" href="#">Skirts/Shorts</a></li>
+                                <li><a class="mega__link" href="#">Accessories </a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="mega__flex">
-                        <h3 class="mega__heading">Women</h3>
-                        <ul class="mega__ul">
-                            <li><a class="mega__link" href="#">Dresses</a></li>
-                            <li><a class="mega__link" href="#">Tops</a></li>
-                            <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
-                            <li><a class="mega__link" href="#">Jackets/Coats</a></li>
-                            <li><a class="mega__link" href="#">Blazers</a></li>
-                            <li><a class="mega__link" href="#">Denim</a></li>
-                            <li><a class="mega__link" href="#">Leggings/Pants</a></li>
-                            <li><a class="mega__link" href="#">Skirts/Shorts</a></li>
-                            <li><a class="mega__link" href="#">Accessories </a></li>
-
-                        </ul>
+                        <div>
+                            <h3 class="mega__heading">Women</h3>
+                            <ul class="mega__ul">
+                                <li><a class="mega__link" href="#">Dresses</a></li>
+                                <li><a class="mega__link" href="#">Tops</a></li>
+                                <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
+                                <li><a class="mega__link" href="#">Jackets/Coats</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mega__heading">Women</h3>
+                            <ul class="mega__ul">
+                                <li><a class="mega__link" href="#">Dresses</a></li>
+                                <li><a class="mega__link" href="#">Tops</a></li>
+                                <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="mega__flex">
-                        <h3 class="mega__heading">Women</h3>
-                        <ul class="mega__ul">
-                            <li><a class="mega__link" href="#">Dresses</a></li>
-                            <li><a class="mega__link" href="#">Tops</a></li>
-                            <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
-                            <li><a class="mega__link" href="#">Jackets/Coats</a></li>
-                            <li><a class="mega__link" href="#">Blazers</a></li>
-                            <li><a class="mega__link" href="#">Denim</a></li>
-                            <li><a class="mega__link" href="#">Leggings/Pants</a></li>
-                            <li><a class="mega__link" href="#">Skirts/Shorts</a></li>
-                            <li><a class="mega__link" href="#">Accessories </a></li>
-
-                        </ul>
+                        <div>
+                            <h3 class="mega__heading">Women</h3>
+                            <ul class="mega__ul">
+                                <li><a class="mega__link" href="#">Dresses</a></li>
+                                <li><a class="mega__link" href="#">Tops</a></li>
+                                <li><a class="mega__link" href="#">Sweaters/Knits</a></li>
+                                <li><a class="mega__link" href="#">Jackets/Coats</a></li>
+                            </ul>
+                        </div>
+                        <img src="img/menuImg.png" alt="menu img">
                     </div>
                 </div>
             </li>
-            <li class="menu__list"><a href="product.html" class="menu__link">Women</a></li>
+            <li class="menu__list"><a href="singlePage.html" class="menu__link">Women</a></li>
             <li class="menu__list"><a href="product.html" class="menu__link">Kids</a></li>
             <li class="menu__list"><a href="product.html" class="menu__link">Accoseriese</a></li>
             <li class="menu__list"><a href="#" class="menu__link">Featured</a></li>
@@ -149,7 +150,7 @@
 
     <main class="CheckoutMainSection">
         <div class="container">
-            <a href="#" class="CheckoutMainSection__Title">01. Shipping Adress</a>
+            <a href="" class="CheckoutMainSection__Title">01. Shipping Adress</a>
             <div class="CheckoutOrderDetailsBlock">
                 <div class="CheckoutOrderDetailsBlock__Left">
                     <p class="CheckoutOrderDetailsBlock__Text1">Check as&nbsp;a&nbsp;guest or&nbsp;register</p>
@@ -185,14 +186,179 @@
             </div>
             <div class="CheckoutMainSection__SplitLine"></div>
             <a href="#" class="CheckoutMainSection__Title">02. BILLING INFORMATION</a>
+            <div class="CheckoutOrderDetailsBlock CheckoutOrderDetailsBlock_invisible">
+                <div class="CheckoutOrderDetailsBlock__Left">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Check as&nbsp;a&nbsp;guest or&nbsp;register</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="guest">CHECKOUT
+                        AS&nbsp;GUEST
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top20">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio"
+                               value="register">REGISTER
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">register and save time!</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top34">&gt;&gt; Fast and easy checkout</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">&gt;&gt; Easy access to&nbsp;your order history and
+                        status</p>
+                    <a class="Button-Black-White-Gray-35 Margin_Top38 Margin_Bottom79" href="#">Continue</a>
+                </div>
+                <div class="CheckoutOrderDetailsBlock_Right">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Already registed?</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Please log in&nbsp;below</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top27">EMAIL&nbsp;ADDRESS</p>
+                    <input type="email" class="OrderSettingsSection_AdressInput Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top23">EMAIL&nbsp;ADDRESS</p>
+                    <input type="password" class="OrderSettingsSection_AdressInput  Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__TextRed  Margin_Top23">* Required Fileds</p>
+                    <div class="CheckoutOrderDetailsBlock__LogInBlock">
+                        <a class="Button-Black-White-Gray-35 Margin_Top0" href="#">Log in</a>
+                        <a class="CheckoutOrderDetailsBlock__TextForgotPassword" href="#">Forgot Password ?</a>
+                    </div>
+                </div>
+            </div>
             <div class="CheckoutMainSection__SplitLine"></div>
             <a href="#" class="CheckoutMainSection__Title">03. SHIPPING INFORMATION</a>
+            <div class="CheckoutOrderDetailsBlock CheckoutOrderDetailsBlock_invisible">
+                <div class="CheckoutOrderDetailsBlock__Left">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Check as&nbsp;a&nbsp;guest or&nbsp;register</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="guest">CHECKOUT
+                        AS&nbsp;GUEST
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top20">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio"
+                               value="register">REGISTER
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">register and save time!</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top34">&gt;&gt; Fast and easy checkout</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">&gt;&gt; Easy access to&nbsp;your order history and
+                        status</p>
+                    <a class="Button-Black-White-Gray-35 Margin_Top38 Margin_Bottom79" href="#">Continue</a>
+                </div>
+                <div class="CheckoutOrderDetailsBlock_Right">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Already registed?</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Please log in&nbsp;below</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top27">EMAIL&nbsp;ADDRESS</p>
+                    <input type="email" class="OrderSettingsSection_AdressInput Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top23">EMAIL&nbsp;ADDRESS</p>
+                    <input type="password" class="OrderSettingsSection_AdressInput  Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__TextRed  Margin_Top23">* Required Fileds</p>
+                    <div class="CheckoutOrderDetailsBlock__LogInBlock">
+                        <a class="Button-Black-White-Gray-35 Margin_Top0" href="#">Log in</a>
+                        <a class="CheckoutOrderDetailsBlock__TextForgotPassword" href="#">Forgot Password ?</a>
+                    </div>
+                </div>
+            </div>
             <div class="CheckoutMainSection__SplitLine"></div>
             <a href="#" class="CheckoutMainSection__Title">04. SHIPPING METHOD</a>
+            <div class="CheckoutOrderDetailsBlock CheckoutOrderDetailsBlock_invisible">
+                <div class="CheckoutOrderDetailsBlock__Left">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Check as&nbsp;a&nbsp;guest or&nbsp;register</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="guest">CHECKOUT
+                        AS&nbsp;GUEST
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top20">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio"
+                               value="register">REGISTER
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">register and save time!</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top34">&gt;&gt; Fast and easy checkout</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">&gt;&gt; Easy access to&nbsp;your order history and
+                        status</p>
+                    <a class="Button-Black-White-Gray-35 Margin_Top38 Margin_Bottom79" href="#">Continue</a>
+                </div>
+                <div class="CheckoutOrderDetailsBlock_Right">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Already registed?</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Please log in&nbsp;below</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top27">EMAIL&nbsp;ADDRESS</p>
+                    <input type="email" class="OrderSettingsSection_AdressInput Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top23">EMAIL&nbsp;ADDRESS</p>
+                    <input type="password" class="OrderSettingsSection_AdressInput  Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__TextRed  Margin_Top23">* Required Fileds</p>
+                    <div class="CheckoutOrderDetailsBlock__LogInBlock">
+                        <a class="Button-Black-White-Gray-35 Margin_Top0" href="#">Log in</a>
+                        <a class="CheckoutOrderDetailsBlock__TextForgotPassword" href="#">Forgot Password ?</a>
+                    </div>
+                </div>
+            </div>
             <div class="CheckoutMainSection__SplitLine"></div>
             <a href="#" class="CheckoutMainSection__Title">05. PAYMENT METHOD</a>
+            <div class="CheckoutOrderDetailsBlock CheckoutOrderDetailsBlock_invisible">
+                <div class="CheckoutOrderDetailsBlock__Left">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Check as&nbsp;a&nbsp;guest or&nbsp;register</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="guest">CHECKOUT
+                        AS&nbsp;GUEST
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top20">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio"
+                               value="register">REGISTER
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">register and save time!</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top34">&gt;&gt; Fast and easy checkout</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">&gt;&gt; Easy access to&nbsp;your order history and
+                        status</p>
+                    <a class="Button-Black-White-Gray-35 Margin_Top38 Margin_Bottom79" href="#">Continue</a>
+                </div>
+                <div class="CheckoutOrderDetailsBlock_Right">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Already registed?</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Please log in&nbsp;below</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top27">EMAIL&nbsp;ADDRESS</p>
+                    <input type="email" class="OrderSettingsSection_AdressInput Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top23">EMAIL&nbsp;ADDRESS</p>
+                    <input type="password" class="OrderSettingsSection_AdressInput  Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__TextRed  Margin_Top23">* Required Fileds</p>
+                    <div class="CheckoutOrderDetailsBlock__LogInBlock">
+                        <a class="Button-Black-White-Gray-35 Margin_Top0" href="#">Log in</a>
+                        <a class="CheckoutOrderDetailsBlock__TextForgotPassword" href="#">Forgot Password ?</a>
+                    </div>
+                </div>
+            </div>
             <div class="CheckoutMainSection__SplitLine"></div>
             <a href="#" class="CheckoutMainSection__Title">06. ORDER REVIEW</a>
+            <div class="CheckoutOrderDetailsBlock CheckoutOrderDetailsBlock_invisible">
+                <div class="CheckoutOrderDetailsBlock__Left">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Check as&nbsp;a&nbsp;guest or&nbsp;register</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio" value="guest">CHECKOUT
+                        AS&nbsp;GUEST
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top20">
+                        <input class="CheckoutOrderDetailsBlock__Radio" name="CheckoutType" type="radio"
+                               value="register">REGISTER
+                    </p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top34">register and save time!</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Register with&nbsp;us for future convenience</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top34">&gt;&gt; Fast and easy checkout</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">&gt;&gt; Easy access to&nbsp;your order history and
+                        status</p>
+                    <a class="Button-Black-White-Gray-35 Margin_Top38 Margin_Bottom79" href="#">Continue</a>
+                </div>
+                <div class="CheckoutOrderDetailsBlock_Right">
+                    <p class="CheckoutOrderDetailsBlock__Text1">Already registed?</p>
+                    <p class="CheckoutOrderDetailsBlock__Text2 Margin_Top15">Please log in&nbsp;below</p>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top27">EMAIL&nbsp;ADDRESS</p>
+                    <input type="email" class="OrderSettingsSection_AdressInput Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__Text1 Margin_Top23">EMAIL&nbsp;ADDRESS</p>
+                    <input type="password" class="OrderSettingsSection_AdressInput  Margin_Top15" required>
+                    <p class="CheckoutOrderDetailsBlock__TextRed  Margin_Top23">* Required Fileds</p>
+                    <div class="CheckoutOrderDetailsBlock__LogInBlock">
+                        <a class="Button-Black-White-Gray-35 Margin_Top0" href="#">Log in</a>
+                        <a class="CheckoutOrderDetailsBlock__TextForgotPassword" href="#">Forgot Password ?</a>
+                    </div>
+                </div>
+            </div>
             <div class="CheckoutMainSection__SplitLine"></div>
         </div>
     </main>
@@ -298,6 +464,13 @@
         </div>
     </div>
 </footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!--<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>-->
+<script src="js/common.js"></script>
+<script src="js/Cart.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 
 </html>

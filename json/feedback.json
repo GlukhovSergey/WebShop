@@ -1,0 +1,8 @@
+{
+  "maxID": 3,
+  "comments": [
+          {"id": "1", "author": "Anna", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "approved": true},
+          {"id": "2", "author": "Tom", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", "approved": true},
+          {"id": "3", "author": "John", "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "approved": false}
+  ]
+}

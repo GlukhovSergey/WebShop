@@ -15,6 +15,13 @@ html, body
 .content
   flex: 1
 
+.sticky
+  position: sticky
+  top: 0
+  z-index: 150
+
+.invisible
+  display: none
 
 .container
   width: 1140px
@@ -34,8 +41,8 @@ html, body
   flex-wrap: wrap
 
 
-.header 
-  height: 100px
+.header
+  height: 70px
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17)
   border: 1px solid #ececec
   background-color: #ffffff
@@ -81,7 +88,7 @@ html, body
     border: 1px solid #e6e6e6
     background: #cdcdcc linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
     /* Style for "Browse" */
-    color: #222222
+    color: #838383
     font-size: 14px
     font-weight: 300
     line-height: 32px
@@ -90,6 +97,12 @@ html, body
     display: flex
     justify-content: center
     align-items: center
+  &__browse:hover
+    border: 1px solid transparent
+    color: $Color_White
+    background: $Color_Pink
+  &__browse:hover .mega__box
+    display: flex
 
 
 .logo
@@ -144,7 +157,11 @@ html, body
     position: absolute
     top: 54px
     left: -15px
-    z-index: 1
+    z-index: 5
+    &_browse
+      position: absolute
+      top: 68px
+      left: 230px
   &__box:after
     content: ""
     display: block
@@ -159,6 +176,9 @@ html, body
     border-left: 1px solid #ececec
   &__flex
     margin-right: 46px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   &__flex:last-of-type
     margin-right: 0
   &__heading
@@ -202,6 +222,9 @@ html, body
     text-transform: uppercase
     letter-spacing: 1.5px
     line-height: 45px
+    transition: letter-spacing 1s
+    &_notLoaded
+      letter-spacing: 10px
   &__h4
     color: #222222
     font-size: 40px
@@ -210,6 +233,9 @@ html, body
     letter-spacing: 1px
     line-height: 32px
     margin-top: 20px
+    transition: letter-spacing 1s
+    &_notLoaded
+      letter-spacing: 4px
   &__fashion
     color: #f16d7f
 
@@ -239,6 +265,10 @@ html, body
     width: 560px
     height: 542px
     margin-top: 98px
+    transition: background-size 3s
+    background-size: 100% 100%
+  &__ForMen:hover
+    background-size: 105% 105%
   &__ForWomen
     background-image: url(../img/HotDeals_ForWomen.png)
     width: 560px
@@ -246,6 +276,10 @@ html, body
     position: absolute
     left: 581px
     top: 0
+    transition: background-size 3s
+    background-size: 100% 100%
+  &__ForWomen:hover
+    background-size: 105% 105%
   &__ForKids
     background-image: url(../img/HotDeals_ForKids.png)
     width: 560px
@@ -253,12 +287,20 @@ html, body
     position: absolute
     top: 281px
     left: 581px
+    transition: background-size 3s
+    background-size: 100% 100%
+  &__ForKids:hover
+    background-size: 105% 105%
   &__Accesories
     width: 560px
     height: 261px
     background: #dadad2 url(../img/HotDeals_Accesories.png) no-repeat 147px 0
     position: absolute
     top: 562px
+    transition: background-size 3s
+    background-size: 100% 100%
+  &__Accesories:hover
+    background-size: 105% 105%
 
 
 .Section-FeturedItems
@@ -586,9 +628,11 @@ html, body
     width: 100%
     height: 281px
 
+
 .product-item:hover
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
   transform: scale(1.1, 1.1)
+
 
 .product-item:hover .add-to-cart
   display: flex
@@ -617,6 +661,8 @@ html, body
     align-content: center
   &__link:hover
     box-shadow: 0 0 5px #fff
+  &__link:active
+    background-color: $Color_Pink
   &__img
     margin-right: 8px
 
@@ -790,6 +836,7 @@ html, body
   &__link:hover
     color: #f16d7f
 
+
 details[open] > .filter-left__title-summary::after
   content: url("../img/details_open.png")
   position: absolute
@@ -810,6 +857,8 @@ details[open] > .filter-left__title-summary::after
     display: flex
     flex-wrap: wrap
     margin-top: 25px
+    &_Price
+      flex-direction: column
   &__reference
     color: #6f6e6e
     font-size: 14px
@@ -833,7 +882,20 @@ details[open] > .filter-left__title-summary::after
     text-transform: uppercase
   &__checkbox
     margin-right: 10px
+  &__priceFlexbox
+    display: flex
+    justify-content: space-between
+  &__priceText
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
 
+#slider-range .ui-slider-range
+  background: $Color_Pink
+#slider-range .ui-slider-handle
+  border-color: $Color_Pink
 
 .pagination
   list-style-type: none
@@ -883,6 +945,7 @@ details[open] > .filter-left__title-summary::after
   &__summary::after
     content: url("../img/details_close.png")
 
+
 details[open] > .sort__summary::after
   content: url("../img/details_open.png")
 
@@ -907,6 +970,7 @@ details[open] > .sort__summary::after
     background-color: #f7f7f7
     text-align: center
     position: relative
+
 
 .product-details
   height: 730px
@@ -1053,6 +1117,7 @@ details[open] > .sort__summary::after
     width: 120px
   &__Column6
     width: 50px
+
 
 .CartCatalog-item
   margin-top: 25px
@@ -1207,6 +1272,8 @@ details[open] > .sort__summary::after
     line-height: 82px
     text-transform: uppercase
     text-decoration: none
+  &__Title:hover
+    color: $Color_Pink
 
 
 .CheckoutOrderDetailsBlock
@@ -1243,6 +1310,8 @@ details[open] > .sort__summary::after
     display: flex
     margin-top: 32px
     align-items: center
+  &_invisible
+    display: none
 
 
 .Cart
@@ -1250,8 +1319,20 @@ details[open] > .sort__summary::after
     margin-right: 26px
     position: relative
     display: block
+    padding: 4px 0
   &__img:hover .Cart__MenuBox
     display: flex
+  &__countGoods
+    width: 20px
+    height: 20px
+    background: $Color_Pink
+    border-radius: 50%
+    color: $Color_White
+    text-align: center
+    line-height: 20px
+    position: absolute
+    top: -7px
+    left: 21px
   &__MenuBox
     width: 262px
     border-radius: 5px
@@ -1261,9 +1342,9 @@ details[open] > .sort__summary::after
     display: none
     flex-direction: column
     position: absolute
-    top: 40px
+    top: 42px
     left: -15px
-    z-index: 1
+    z-index: 10
   &__MenuBox:after
     content: ""
     display: block
@@ -1276,6 +1357,18 @@ details[open] > .sort__summary::after
     background-color: #fff
     border-top: 1px solid #ececec
     border-left: 1px solid #ececec
+  &__ProductBox
+    display: flex
+    align-content: center
+  &__DeleteItem
+    display: block
+    color: #656565
+    font-size: 13px
+    font-weight: 400
+    text-align: center
+    line-height: 85px
+  &__DeleteItem:hover
+    color: $Color_Pink
   &__MenuTotalBox
     display: flex
     justify-content: space-between
@@ -1289,6 +1382,7 @@ details[open] > .sort__summary::after
 .CartMenuProduct
   display: flex
   text-decoration: none
+  width: 250px
   &__img
     width: 72px
     height: 85px
@@ -1314,6 +1408,80 @@ details[open] > .sort__summary::after
     font-weight: 400
     text-transform: uppercase
     text-decoration: none
+
+
+.feedback
+  padding-top: 10px
+  display: flex
+  justify-content: space-evenly
+  flex-wrap: wrap
+  &__section
+    padding: 70px 0 0
+  &__formContainer
+    background-color: #f2f2f2
+    padding: 25px
+    display: none
+  &__visible
+    display: block
+  &__form
+    background-color: $Color_White
+    display: flex
+    flex-direction: column
+    width: 600px
+    padding: 20px
+    margin: 0 auto
+  &__closeFormBtn
+    color: GrayText
+    text-align: end
+  &__closeFormBtn:hover
+    color: $Color_Pink
+  &__input
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #bcbcbc
+    font-size: 13px
+    font-weight: 400
+    line-height: 35px
+    margin-top: 16px
+    padding: 0 15px
+  &__receiveCommentBtn
+    height: 59px
+    width: 537px
+    border: 1px solid #ef5b70
+    background-color: #ffffff
+    line-height: 59px
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 700
+    margin: 15px auto 0
+    display: flex
+    justify-content: center
+    align-content: center
+    text-decoration: none
+    transition: background-color 0.3s
+  &__receiveCommentBtn:hover
+    color: #ffffff
+    border: 1px solid #ffffff
+    background-color: #ef5b70
+  &__comment
+    padding: 15px
+    width: 350px
+    border-radius: 5px
+    box-shadow: 0 0 5px 1px darkgrey
+    box-sizing: border-box
+    margin-bottom: 30px
+    background-color: #f2f2f2
+    min-height: 100px
+  &__author
+    color: $Color_Pink
+    font-weight: 900
+  &__buttons
+    display: flex
+    justify-content: space-evenly
+    font-size: 45px
+    color: GrayText
+  &__button:hover
+    color: $Color_Pink
 
 
 .Margin

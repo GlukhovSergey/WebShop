@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 1
+  },
+  {
+    "id": 2,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 2
+  },
+  {
+    "id": 3,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 3
+  },
+  {
+    "id": 4,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 4
+  },
+  {
+    "id": 5,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 5
+  },
+  {
+    "id": 6,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 4
+  },
+  {
+    "id": 7,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 3
+  },
+  {
+    "id": 8,
+    "name": "Mango People T-shirt",
+    "price": 52,
+    "mark": 2
+  }
+]
